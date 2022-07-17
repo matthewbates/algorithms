@@ -5,19 +5,19 @@
 // the function should return an uncompressed version of the string where
 // each "char" of a group is repeated "number" times consecutively
 
-function uncompress(s) {
+function uncompress(str) {
   let result = [];
   const numbers = "0123456789";
   let i = 0;
   let j = 0;
 
-  while (j < s.length) {
-    if (numbers.includes(s[j])) {
+  while (j < str.length) {
+    if (numbers.includes(str[j])) {
       j++;
     } else {
-      const num = Number(s.slice(i, j));
+      const num = Number(str.slice(i, j));
       for (let count = 0; count < num; count++) {
-        result.push(s[j]);
+        result.push(str[j]);
       }
       j++;
       i = j;
@@ -26,4 +26,4 @@ function uncompress(s) {
   return result.join("");
 }
 
-console.log(uncompress("2a6b8c10d")); 
+console.log(uncompress("2a6b8c10d"));
