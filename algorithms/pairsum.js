@@ -17,4 +17,19 @@ function pairSum(numbers, targetSum) {
   return nums;
 }
 
+// *solved using hash table (POJO)*
+function pairSum(numbers, targetSum) {
+  const previousNums = {};
+
+  for (let i = 0; i < numbers.length; i++) {
+    const num = numbers[i];
+    const complement = targetSum - num;
+
+    if (complement in previousNums) {
+      return [i, previousNums[complement]];
+    }
+    previousNums[num] = i;
+  }
+}
+
 console.log(pairSum([1, 3, 4, 7, 9], 8));

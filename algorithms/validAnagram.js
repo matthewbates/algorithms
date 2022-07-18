@@ -59,4 +59,4 @@ function anagrams(s1, s2) {
   return true;
 }
 
-console.log(anagrams("cats", "scat"));
+console.log(anagrams("cats", "scdat"));
