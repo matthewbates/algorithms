@@ -3,6 +3,7 @@
 // return false otherwise
 
 function isPalindrom(str) {
+  // base case
   if (str === "" || str.length === 0) return false;
 
   const regex = /[\W_]/g;
@@ -11,4 +12,4 @@ function isPalindrom(str) {
   return lowerCaseRegex === reverseLowerCase;
 }
 
-console.log(isPalindrom("racecar"));
+console.log(isPalindrom("abba"));
