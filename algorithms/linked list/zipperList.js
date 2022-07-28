@@ -16,14 +16,12 @@ const b = new Node("b");
 const c = new Node("c");
 a.next = b;
 b.next = c;
-// a -> b -> c
 
 const x = new Node("x");
 const y = new Node("y");
 const z = new Node("z");
 x.next = y;
 y.next = z;
-// x -> y -> z
 
 // *iterative
 function zipperLists(head1, head2) {
