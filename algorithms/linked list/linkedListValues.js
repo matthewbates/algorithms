@@ -29,6 +29,8 @@ function linkedListValues(head) {
   return values;
 }
 
+console.log(linkedListValues(a));
+
 // *recursive
 function linkedListValues(head) {
   const values = [];
