@@ -18,6 +18,7 @@ a.next = b;
 b.next = c;
 c.next = d;
 
+// *iterative
 function linkedListFind(head, target) {
   let current = head;
 
@@ -28,4 +29,11 @@ function linkedListFind(head, target) {
   return false;
 }
 
-console.log(linkedListFind(a, "d"));
+// *recursive
+function linkedListFind(head, target) {
+  if (head === null) return false;
+  if (head.val === target) return true;
+  return linkedListFind(head.next, target);
+}
+
+console.log(linkedListFind(a, "a"));
