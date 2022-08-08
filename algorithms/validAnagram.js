@@ -50,7 +50,7 @@ function anagrams(s1, s2) {
   }
   // edge case
   for (let char in count) {
-    // if the count of char isn't 0, return false
+   171
     if (count[char] !== 0) {
       // didn't have a matching count for that char
       return false;

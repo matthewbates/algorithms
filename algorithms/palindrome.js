@@ -1,4 +1,4 @@
-// write a functio nthat will receive one argument, a string
+// write a function that will receive one argument, a string
 // function should return true if the string is a palindrom (reads the same forwards/backwards)
 // return false otherwise
 
