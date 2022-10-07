@@ -27,15 +27,19 @@ function validAnagram(first, second) {
 
 //  *second solution*
 function anagrams(s1, s2) {
-  // initialize an empty object
+  // initialize an empty hash (object)
   const count = {};
 
-  // iterate through every character of the string
+  // iterates over the values of a data structure,
+  // in this case, every character of the string
   for (let char of s1) {
-    // if the key isn't inside the object
+    // iterates over the keys of the object - in this case, char
+    // "if the key isn't inside the object"
     if (!(char in count)) {
+      // sets the value to 0
       count[char] = 0;
     }
+    // else, sets increments the value by 1
     count[char]++;
   }
 
@@ -50,7 +54,6 @@ function anagrams(s1, s2) {
   }
   // edge case
   for (let char in count) {
-   171
     if (count[char] !== 0) {
       // didn't have a matching count for that char
       return false;
@@ -59,4 +62,4 @@ function anagrams(s1, s2) {
   return true;
 }
 
-console.log(anagrams("cats", "scdat"));
+console.log(anagrams("cats", "scat"));
