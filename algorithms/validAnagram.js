@@ -3,16 +3,20 @@ function validAnagram(first, second) {
   if (first.length !== second.length) {
     return false;
   }
-
+  // initiate an object
   const lookup = {};
 
-  for (let i = 0; i < first.length; i++) {
-    let letter = first[i];
+  // for (let i = 0; i < first.length; i++) {
+  for (let value of first) {
+    // letter will be the count
+    let letter = first[value];
     // if letter exists, increment, otherwise, set to 1
+    // key[value] ? increase value by 1, else set value to 1
     lookup[letter] ? (lookup[letter] += 1) : (lookup[letter] = 1);
   }
-  for (let i = 0; i < second.length; i++) {
-    let letter = second[i];
+  // for (let i = 0; i < second.length; i++) {
+    for (let value of second) {
+    let letter = second[value];
     // can't find lookup letter || letter is zero then
     // it's not an anagram
     if (!lookup[letter]) {
@@ -62,4 +66,4 @@ function anagrams(s1, s2) {
   return true;
 }
 
-console.log(anagrams("cats", "scat"));
+console.log(validAnagram("cats", "scat"));

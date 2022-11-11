@@ -11,6 +11,7 @@ const products = [
 const getTotalAmountForProducts = (products) => {
   let totalPrice = 0;
 
+  // same as a for loop; calculates the values of an object
   for (const product of products) {
     totalPrice += product.price;
   }
