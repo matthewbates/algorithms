@@ -20,4 +20,4 @@ function fiveSort(nums) {
   return nums;
 }
 
-// console.log(fiveSort([12, 5, 1, 5, 12, 7]));
+console.log(fiveSort([12, 5, 1, 5, 12, 7]));
